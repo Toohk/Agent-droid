@@ -97,13 +97,13 @@ std::size_t callback(const char* in, std::size_t size, std::size_t num, std::str
 void sendMessageToAPI(const std::string& message) {
     const std::string url = "https://api.openai.com/v1/chat/completions";
     if (history.empty()) {
-        addMessageToHistory("system", "Je m'appelle Thomas, tu est mon assistant, tu répond par des réponses courtes, tu aimes discuter.");
+        addMessageToHistory("system", "Prompt");
     }
     addMessageToHistory("user", message);
 
     const std::string payload = constructPayload();
 
-    const char* api_key = "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";  // Attention : ne jamais afficher votre clé API en clair !
+    const char* api_key = "";  // Attention : ne jamais afficher votre clé API en clair !
     if (!api_key) {
         std::cerr << "Veuillez définir l'environnement OPENAI_API_KEY" << std::endl;
         return;
