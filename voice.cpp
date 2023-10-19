@@ -8,8 +8,8 @@
 #include "voice.hpp"
 
 constexpr size_t CHUNK_SIZE = 1024;
-const std::string XI_API_KEY = "8d801802607526429c1ad6373b4dfbdc"; 
-const std::string VOICE_ID = "ghusF9Wc1QwsdRyqWOHQ"; 
+const std::string XI_API_KEY = ""; 
+const std::string VOICE_ID = ""; 
 
 std::size_t write_callback(char* ptr, std::size_t size, std::size_t nmemb, void* userdata) {
     std::ofstream* out = static_cast<std::ofstream*>(userdata);
